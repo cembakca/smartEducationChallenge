@@ -6,7 +6,7 @@ export default class SearchHeader extends Component {
   render() {
     return (
       <Header
-        style={{ height: 60 }}
+        style={{ height: 60, backgroundColor: 'white' }}
         searchBar
         rounded
       >

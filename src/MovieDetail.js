@@ -72,7 +72,7 @@ export default class MovieDetail extends Component {
             <Text>Genel Bilgiler</Text>
           </ListItem>
           <ListItem >
-                <Body left>
+                <Body>
                   <Text>Yapım Yılı</Text>
                   <Text note>{selectedMovie.Year}</Text>
                 </Body>
@@ -80,7 +80,7 @@ export default class MovieDetail extends Component {
                   <Text>Imdb Puanı</Text>
                   <Text note>{selectedMovie.imdbRating}</Text>
                 </Body>
-                <Body right>
+                <Body>
                   <Text>Box Office</Text>
                   <Text note>{selectedMovie.BoxOffice}</Text>
                 </Body>
@@ -117,6 +117,22 @@ export default class MovieDetail extends Component {
           <ListItem >
           <Body>
             <Text> {selectedMovie.Plot}</Text>
+          </Body>
+          </ListItem>
+          <ListItem itemDivider>
+            <Text>Tür</Text>
+          </ListItem>
+          <ListItem >
+          <Body>
+            <Text> {selectedMovie.Genre}</Text>
+          </Body>
+          </ListItem>
+          <ListItem itemDivider>
+            <Text>Oyuncular</Text>
+          </ListItem>
+          <ListItem >
+          <Body>
+            <Text> {selectedMovie.Actors}</Text>
           </Body>
           </ListItem>
         </List>

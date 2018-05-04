@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, StyleSheet } from 'react-native';
 import { Content, List, ListItem, Thumbnail, Text, Body } from 'native-base';
+
+const styles = StyleSheet.create({
+  body: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1B263B',
+    borderRadius: 10,
+  },
+  detailText: {
+    color: '#E0E1DD',
+    fontSize: 16,
+  },
+});
 
 export default class MovieColumn extends Component {
   render() {
-    const movieData = this.props.item;
-
-    console.log(movieData);
     return (
       <Content>
         <List>
@@ -22,16 +33,8 @@ export default class MovieColumn extends Component {
               <Text note>{this.props.item.Released}</Text>
             </Body>
             <TouchableOpacity onPress={this.props.onPress}>
-              <Body
-                style={{
-                  flex: 1,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  backgroundColor: '#1B263B',
-                  borderRadius: 10,
-                }}
-              >
-                <Text style={{ color: '#E0E1DD', fontSize: 16 }}>Detay</Text>
+              <Body style={styles.body}>
+                <Text style={styles.detailText}>Detay</Text>
               </Body>
             </TouchableOpacity>
           </ListItem>

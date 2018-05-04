@@ -20,11 +20,11 @@ const RootStack = StackNavigator(
     },
     MovieDetail: {
       screen: MovieDetail,
-    }
+    },
   },
   {
     initialRouteName: 'MovieList',
-  }
+  },
 );
 
 export default App;
